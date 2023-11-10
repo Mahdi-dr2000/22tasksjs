@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+
+    function middleOfArray(arr)
+    {
+        middle=Math.round(arr.length/2-1);
+        result=false;
+       for(let i=0;i<arr.length;i++)
+       {
+          if(arr[i]%2 !=0)
+          {
+             result=true;
+          }
+       }
+       if(result===true)
+       {
+        document.write(arr[middle]);
+       }
+      
+       if(result===false)
+       {
+        document.write(arr[middle]+"<br>");
+        document.write(+arr[middle+1]);
+       }
+    }
+    document.write('odd              ');
+    middleOfArray([10,40,101,50,70,90]);
+    document.write("<br>");
+    document.write('even'); middleOfArray([10,40,100,50,70,90]);
+
+</script>

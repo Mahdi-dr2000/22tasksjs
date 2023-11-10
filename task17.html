@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var nums = [1, 2, 3, 8, 9];
+  var nums2= [1,2,3,8,9,77];
+
+  // function aveArray(arr) {
+  //   let sum = 0;
+  //   for (let i = 0; i < arr.length; i++) {
+  //     sum=sum+arr[i];
+  //   }
+  //   return sum / arr.length;
+  // }
+
+  function aveArray(arr)
+  {
+    let i=0;
+    let sum=0
+    while(i<arr.length)
+    {
+       sum=sum+arr[i];
+       i++;
+    }
+    return (sum/arr.length);
+  }
+  document.write(aveArray(nums)+"<br>");
+  document.write(aveArray(nums2));
+
+</script>

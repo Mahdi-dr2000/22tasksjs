@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var nums = [1, 2, 3, 8, 9];
+  function RemoveFromArray(arr,num) {
+
+    for(let i=0;i<arr.length;i++)
+    {
+      if(arr[i]===num)
+      {
+        nums=i;
+        arr[nums]=arr[arr.length-1];
+        arr[arr.length-1]=num;
+
+        if(i===arr.length-1)
+        {
+          arr.length=arr.length-1;
+        }
+      
+        
+    
+      }
+    }
+
+     return arr;
+  }
+  document.write(RemoveFromArray(nums,3));
+</script>

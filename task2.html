@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="options">
+      <option selected disabled>Select Fruites</option>
+    </select>
+  </body>
+</html>
+
+<script>
+  var fruits = ["Tomato", "Banana", "Watermelon"];
+  let options = document.getElementById("options");
+  for (let i = 0; i < fruits.length; i++) {
+    var elment = document.createElement("option");
+    elment.value = fruits[i];
+    elment.textContent = fruits[i];
+    options.appendChild(elment);
+  }
+
+  options.addEventListener("change", function () {
+    var optionselect = options.options[options.selectedIndex];
+    var result = fruits.indexOf(optionselect.value);
+    alert(`The index  : ${optionselect.value}   = ${result}`);
+  });
+</script>

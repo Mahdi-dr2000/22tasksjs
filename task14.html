@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var nums = [1, 2, 3, 8, -1, 9, 0];
+
+  function minInArray(nums) {
+    for (let i = 0; i < nums.length; i++) {
+      for (let j = 0; j<i; j++) {
+        if (nums[i]< nums[j]) {
+          let temp = nums[i];
+          nums[i] = nums[j];
+          nums[j] = temp;
+        }
+      }
+     
+    }
+    return nums;
+  }
+  document.write(minInArray(nums));
+</script>
